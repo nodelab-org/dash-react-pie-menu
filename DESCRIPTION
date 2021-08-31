@@ -1,0 +1,13 @@
+Package: dashReactPieMenu
+Title: Dash react pie menu
+Version: 0.0.1
+Description: Dash react pie menu
+Depends: R (>= 3.0.2)
+Imports: 
+Suggests: 
+License: MIT + file LICENSE
+URL: 
+BugReports: 
+Encoding: UTF-8
+LazyData: true
+KeepSource: true

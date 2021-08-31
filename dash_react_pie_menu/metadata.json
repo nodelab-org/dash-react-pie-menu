@@ -1,0 +1,175 @@
+{
+  "src/lib/components/DashReactPieMenu.react.js": {
+    "description": "",
+    "displayName": "DashReactPieMenu",
+    "methods": [],
+    "props": {
+      "centerRadius": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Defines the center radius. For example, 30px or 0 (no center). This prop is forwarded to the Center Component.",
+        "defaultValue": {
+          "value": "\"30px\"",
+          "computed": false
+        }
+      },
+      "centerX": {
+        "type": {
+          "name": "string"
+        },
+        "required": true,
+        "description": "Defines the x position of the pie menu in CSS Unit. For example, 0px will be left-most position of its parent container."
+      },
+      "centerY": {
+        "type": {
+          "name": "string"
+        },
+        "required": true,
+        "description": "Defines the y position of the pie menu in CSS Unit. For example, 0px will be the top-most position of its parent container."
+      },
+      "children": {
+        "type": {
+          "name": "array"
+        },
+        "required": false,
+        "description": "DashSlice components"
+      },
+      "hidden": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "The ID used to identify this component in Dash callbacks.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": true,
+        "description": "The ID used to identify this component in Dash callbacks."
+      },
+      "loading_state": {
+        "type": {
+          "name": "shape",
+          "value": {
+            "is_loading": {
+              "name": "bool",
+              "description": "Determines if the component is loading or not",
+              "required": false
+            },
+            "prop_name": {
+              "name": "string",
+              "description": "Holds which property is loading",
+              "required": false
+            },
+            "component_name": {
+              "name": "string",
+              "description": "Holds the name of the component that is loading",
+              "required": false
+            }
+          }
+        },
+        "required": false,
+        "description": "Assigned by Dash"
+      },
+      "radius": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Defines pie menu's radius in CSS Unit. For example, 150px. `",
+        "defaultValue": {
+          "value": "\"125px\"",
+          "computed": false
+        }
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Dash-assigned callback that should be called to report property changes\nto Dash, to make them available for callbacks."
+      }
+    }
+  },
+  "src/lib/components/DashSlice.react.js": {
+    "description": "",
+    "displayName": "DashSlice",
+    "methods": [],
+    "props": {
+      "icon": {
+        "type": {
+          "name": "string"
+        },
+        "required": true,
+        "description": "The ID used to identify this component in Dash callbacks."
+      },
+      "iconsize": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The ID used to identify this component in Dash callbacks.",
+        "defaultValue": {
+          "value": "\"2x\"",
+          "computed": false
+        }
+      },
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": true,
+        "description": "The ID used to identify this component in Dash callbacks."
+      },
+      "loading_state": {
+        "type": {
+          "name": "shape",
+          "value": {
+            "is_loading": {
+              "name": "bool",
+              "description": "Determines if the component is loading or not",
+              "required": false
+            },
+            "prop_name": {
+              "name": "string",
+              "description": "Holds which property is loading",
+              "required": false
+            },
+            "component_name": {
+              "name": "string",
+              "description": "Holds the name of the component that is loading",
+              "required": false
+            }
+          }
+        },
+        "required": false,
+        "description": "Assigned by Dash"
+      },
+      "n_clicks": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Height of the content in CSS Size. This prop is used to center the content between top and bottom of the slice. For example, 2em.",
+        "defaultValue": {
+          "value": "0",
+          "computed": false
+        }
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Dash-assigned callback that should be called to report property changes\nto Dash, to make them available for callbacks."
+      }
+    }
+  }
+}

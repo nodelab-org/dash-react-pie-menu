@@ -1,0 +1,11 @@
+include dash_react_pie_menu/dash_react_pie_menu.min.js
+include dash_react_pie_menu/dash_react_pie_menu.min.js.map
+include dash_react_pie_menu/async-*.js
+include dash_react_pie_menu/async-*.js.map
+include dash_react_pie_menu/*-shared.js
+include dash_react_pie_menu/*-shared.js.map
+include dash_react_pie_menu/metadata.json
+include dash_react_pie_menu/package-info.json
+include README.md
+include LICENSE
+include package.json
