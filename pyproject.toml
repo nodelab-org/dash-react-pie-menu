@@ -7,9 +7,9 @@ license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.8"
-dash = "^1.21.0"
+dash = "^2.0.0"
 sd-material-ui = "^4.5.1"
-dash-bootstrap-components = "^0.13.0"
+dash-bootstrap-components = "^1.0.0"
 
 [tool.poetry.dev-dependencies]
 

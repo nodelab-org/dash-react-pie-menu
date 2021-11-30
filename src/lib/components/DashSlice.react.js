@@ -2,90 +2,259 @@ import React, {} from 'react';
 import PropTypes from 'prop-types';
 import {Slice} from 'react-pie-menu';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import { 
-    faMinusCircle, 
-    faPalette, 
-    faBookmark, 
-    faArrowsAlt, 
-    faTag, 
-    faLink, 
-    faExternalLinkAlt, 
-    faPaperclip, 
+    // fix node (data)
     faAnchor,
-    faDownload,
+    // two-way arrow. Add link or relation
+    faArrowAltH,
+    // arrow. Add link
+    faArrowAltRight,
+    faArrowAltLeft,
+    // expand neighbours
+    faArrowsAlt,
+    // graph? 
     faBezierCurve,
-    faFilter
+    // bookmark
+    faBookmark, 
+    // role
+    faBriefcase,
+    // node
+    faCircle,
+    // graph, data
+    faCloudsmith,
+    // subtyping
+    faCodeBranch,
+    // settings
+    faCog,
+    // collapse neighbours
+    faCompressArrowsAlt,
+    // similar to material UI storage
+    faDatabase,
+    // download
+    faDownload,
+    // edit
+    faEdit,
+    // hide
+    faEyeSlash, 
+    // increase size
+    faExpandAlt,
+    // url value/attribute
+    faExternalLinkAlt, 
+    // color
+    faFillDrip,
+    // filtering
+    faFilter,
+    // label
+    faFont,
+    // ownership
+    faHandHolding,
+    // relation
+    faHandshake,
+    faHandshakeSlash,
+    // role
+    faHardHat,
+    // highlight
+    faHighlighter,
+    // relation/relates (a hub node connecting others)
+    faHubSpot,
+    // icons
+    faIcons,
+    // images
+    faImages,
+    // key
+    faKey,
+    // chain link: relation 
+    faLink, 
+    // magic wand, possibly for special node actions
+    faMagic,
+    // inheritance, hierarchy, ownership?
+    faNetworkWired,
+    // color
+    faPaintBrush,
+    // color
+    faPalette, 
+    // atttachment value/attribute
+    faPaperclip, 
+    // connect two people
+    faPeopleArrows,
+    // query or activate node
+    faPlay,
+    faPlayCircle,
+    // add
+    faPlus,
+    faPlusCircle,
+    // plays or relates
+    faProjectDiagram,
+    // find path between two nodes
+    faRoute,
+    // node val (size)
+    faRuler,
+    // save
+    faSave,
+    // server - similar to material UI dns
+    faServer,
+    // subtype / schema
+    faSitemap,
+    // parameters / settings
+    faSlidersH,
+    // sort text 
+    faSortAlphaDown,
+    faSortAlphaDownAlt,
+    faSortAlphaUp,
+    faSortAlphaUpAlt,
+    // sort amount
+    faSortAmountDown,
+    faSortAmountDownAlt,
+    faSortAmountUp,
+    faSortAmountUpAlt,
+    // sort number
+    faSortNumericDown,
+    faSortNumericDownAlt,
+    faSortNumericUp,
+    faSortNumericUpAlt,
+    // attribute(s)
+    faTag, 
+    faTags,
+    // possibly query
+    faTerminal,
+    // settings / tools
+    faTools,
+    // delete
+    faTrash,
+    faTrashAlt,
+    // delete relation
+    faUnlink,
+    // label or attribute
+    faUserTag,
+    // Role
+    faUserTie,
+    // settings
+    faWrench
 } from '@fortawesome/free-solid-svg-icons'
 
 const icons = {
-    "faMinusCircle":faMinusCircle, 
-    "faPalette":faPalette, 
-    "faBookmark":faBookmark, 
-    "faArrowsAlt":faArrowsAlt, 
-    "faTag":faTag, 
-    "faLink":faLink, 
-    "faExternalLinkAlt":faExternalLinkAlt, 
-    "faPaperclip":faPaperclip, 
     "faAnchor":faAnchor,
-    "faDownload":faDownload,
+    "faArrowAltH":faArrowAltH,
+    // arrow. Add link
+    "faArrowAltRight":faArrowAltRight,
+    "faArrowAltLeft":faArrowAltLeft,
+    "faArrowsAlt":faArrowsAlt, 
     "faBezierCurve":faBezierCurve,
-    "faFilter":faFilter
+    "faBookmark":faBookmark, 
+    "faBriefcase":faBriefcase,
+    "faCircle":faCircle,
+    "faCloudsmith":faCloudsmith,
+    "faCog":faCog,
+    "faCodeBranch":faCodeBranch,
+    "faCompressArrowsAlt":faCompressArrowsAlt,
+    "faDatabase":faDatabase,
+    "faDownload":faDownload,
+    "faEdit":faEdit,
+    "faEyeSlash":faEyeSlash, 
+    "faExpandAlt":faExpandAlt,
+    "faExternalLinkAlt":faExternalLinkAlt, 
+    "faFillDrip":faFillDrip,
+    "faFilter":faFilter,
+    "faFont":faFont,
+    "faHandHolding":faHandHolding,
+    "faHandshake":faHandshake,
+    "faHandshakeSlash":faHandshakeSlash,
+    "faHardHat": faHardHat,
+    "faHighlighter":faHighlighter,
+    "faHubSpot":faHubSpot, 
+    "faIcons":faIcons,
+    "faImages":faImages,
+    "faKey":faKey,
+    "faLink":faLink, 
+    "faMagic":faMagic,
+    "faNetworkWired":faNetworkWired,
+    "faPaintBrush":faPaintBrush,
+    "faPalette":faPalette, 
+    "faPaperclip":faPaperclip, 
+    "faPeopleArrows":faPeopleArrows,
+    "faPlay":faPlay,
+    "faPlayCircle":faPlayCircle,
+    "faPlus":faPlus,
+    "faPlusCircle":faPlusCircle,
+    "faProjectDiagram":faProjectDiagram,
+    "faRoute":faRoute,
+    "faRuler":faRuler,
+    "faSave":faSave,
+    "faServer":faServer,
+    "faSitemap":faSitemap,
+    "faSlidersH":faSlidersH,
+    "faSortAlphaDown":faSortAlphaDown,
+    "faSortAlphaDownAlt":faSortAlphaDownAlt,
+    "faSortAlphaUp":faSortAlphaUp,
+    "faSortAlphaUpAlt":faSortAlphaUpAlt,
+    "faSortAmountDown":faSortAmountDown,
+    "faSortAmountDownAlt":faSortAmountDownAlt,
+    "faSortAmountUp":faSortAmountUp,
+    "faSortAmountUpAlt":faSortAmountUpAlt,
+    "faSortNumericDown":faSortNumericDown,
+    "faSortNumericDownAlt":faSortNumericDownAlt,
+    "faSortNumericUp":faSortNumericUp,
+    "faSortNumericUpAlt":faSortNumericUpAlt,
+    "faTag":faTag, 
+    "faTags":faTags, 
+    "faTerminal":faTerminal,
+    "faTools":faTools,
+    "faTrash":faTrash,
+    "faTrashAlt":faTrashAlt,
+    "faUnlink":faUnlink,
+    "faUserTag":faUserTag,
+    "faUserTie":faUserTie,
+    "faWrench":faWrench
 }
 
 export default function DashSlice (props) {
-    const {icon, iconsize, n_clicks, loading_state} = props;
+
+    const {attrs, className, icon, iconColor, iconSize, id, n_clicks, loading_state} = props;
     return (
-        // <div 
-        //     id={props.id}
-        //     key={props.id}
-        //     className={props.className}
-        //     style={props.style}
-        //     // data-contentHeight={props.contentHeight}
-        //     disabled={props.disabled}
-        //     // children={props.children}
-        //     data-dash-is-loading={
-        //         (props.loading_state && props.loading_state.is_loading) || undefined
-        //     }>
-        <Slice
-            // highlight={highlight}
-            // icon={icon}
-            // iconsize={iconsize}
-            n_clicks={n_clicks}
+        <Slice    
+            id={id}
+            key={id}
+            attrs={attrs}
+            className={className}
             // data-dash-is-loading={
             //     (loading_state && loading_state.is_loading) || undefined
             // }
             onSelect={() => props.setProps({ "n_clicks" : n_clicks+1 })}
             >
-            <FontAwesomeIcon icon={icons[icon]} size={iconsize}/>
+            <FontAwesomeIcon icon={icons[icon]} size={iconSize} color={iconColor}/>
         </Slice>
-        // </div>
     );
 }
 
 DashSlice.defaultProps = {
     // highlight:true,
-    // className:"dash-slice",
-    iconsize:"2x",
-    n_clicks:0,
+    attrs:{},
+    className:"react-pie-menu-slice",
+    // hidden: false,
+    iconColor:"#192733",
+    iconSize:"2x",
+    n_clicks:0
     // style:{}
 };
 
 DashSlice.propTypes = {
-    
+    // see https://www.npmjs.com/package/react-pie-menu
+
+    /**
+     * You can add custom attributes by specifying in attrs. For example, { enabled: 'true' }.
+    */
+    attrs: PropTypes.object,
+
     /**
      * CSS class
     */
-    // className: PropTypes.string,
+    className: PropTypes.string,
 
     /**
      * Height of the content in CSS Size. This prop is used to center the content between top and bottom of the slice. For example, 2em.
      */
     // contentHeight: PropTypes.string,
-
-    /**
-     * Children. Must be an icon
-     */
-    // children: PropTypes.string,
     
     /**
      * whether to highlight 
@@ -93,14 +262,18 @@ DashSlice.propTypes = {
     // highlight: PropTypes.bool,
     
     /**
-     * The ID used to identify this component in Dash callbacks.
+     * The font awesome icon, e.g. "faCoffee". Must be one of the icons imported above.
      */
     icon: PropTypes.string.isRequired,
     
     /**
-     * The ID used to identify this component in Dash callbacks.
+     * Icon color
      */
-    iconsize: PropTypes.string,
+    iconColor: PropTypes.string,
+    /**
+     * icon size, e.g. "xs", "2x". See https://fontawesome.com/v5.15/how-to-use/on-the-web/styling/sizing-icons
+     */
+    iconSize: PropTypes.string,
     
     /**
      * The ID used to identify this component in Dash callbacks.
@@ -126,9 +299,10 @@ DashSlice.propTypes = {
     }),
 
     /**
-     * Height of the content in CSS Size. This prop is used to center the content between top and bottom of the slice. For example, 2em.
+     * number of times slice has been clicked
      */
     n_clicks: PropTypes.number,
+
     
     /**
      * Dash-assigned callback that should be called to report property changes
@@ -140,6 +314,5 @@ DashSlice.propTypes = {
      * inline styling (see Dash docs)
      */
     // style: PropTypes.object
-
     
 };

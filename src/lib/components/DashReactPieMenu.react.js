@@ -1,8 +1,21 @@
 import React, {} from 'react';
 import PropTypes from 'prop-types';
-import PieMenu, {Slice} from 'react-pie-menu';
+import PieMenu, { } from 'react-pie-menu'
+//import { ThemeProvider, css } from 'styled-components';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faWindowClose } from '@fortawesome/free-solid-svg-icons'
 
-// import { isNil } from 'ramda';
+
+// function PieCenterCloseButton (props) {
+//     const {centerRadius, iconsize, n_clicks, setProps, loading_state} = props;
+//     return (
+//         <PieCenter 
+//             centerRadius={centerRadius || '30px'}
+//             onclick={onclick}>
+//             <FontAwesomeIcon icon={faWindowClose} size={iconsize}/>
+//         </PieCenter>
+//     );
+// }
 
 const parseChildrenToArray = (children) => {
     if (children && !Array.isArray(children)) {
@@ -11,81 +24,55 @@ const parseChildrenToArray = (children) => {
     return children;
 };
 
-// const resolveChildProps = (child) => {
-//     // This may need to change in the future if https://github.com/plotly/dash-renderer/issues/84 is addressed
-//     if (
-//         // disabled is a defaultProp (so it's always set)
-//         // meaning that if it's not set on child.props, the actual
-//         // props we want are lying a bit deeper - which means they
-//         // are coming from Dash
-//         isNil(child.props.disabled) &&
-//         child.props._dashprivate_layout &&
-//         child.props._dashprivate_layout.props
-//     ) {
-//         // props are coming from Dash
-//         return child.props._dashprivate_layout.props;
-//     } else {
-//         // else props are coming from React (e.g. Demo.js, or Tabs.test.js)
-//         return child.props;
+// const theme = {
+//     pieMenu: {
+//         container: css`
+//         z-index: 1060;
+//         `,
+//         list: css`
+//         z-index: 1060;
+//         `,
+//         item: css`
+//         z-index: 1060;
+//         `;
 //     }
-// };
+// }
 
 export default function DashReactPieMenu (props) {
-    const {id, children, hidden, radius, centerRadius, centerX, centerY, loading_state, ...otherProps} = props;
+    const {className, id, children,  hidden, radius, centerRadius, centerX, centerY, loading_state, setProps,  ...otherProps} = props;
 
     const slices = parseChildrenToArray(children)
-        // .map((child) => {
-        //     const childProps = resolveChildProps(child)
-        //     return (
-        //         <Slice
-        //             id = {childProps.id}
-        //             key = {childProps.id}
-        //             //_highlight={childProps.highlight}
-        //             n_clicks={childProps.n_clicks}
-        //             // onSelect={childProps.onSelect}
-        //             onSelect={() => props.setProps({ "n_clicks" : childProps.n_clicks + 1 })}
-        //         >
-        //             <FontAwesomeIcon icon={icons[childProps.icon]} size={childProps.iconsize}/>
-        //             {/* {child} */}
-        //         </Slice>
-        //     )
-        // })
+    // const centerButton = () => {return <PieCenter centerRadius={centerRadius || '30px'}> </PieCenter>}
+    // const centerButton = <PieCenterCloseButton centerRadius={centerRadius || "30px"} iconsize={iconsize} onclick={() => setProps({hidden:true})}> </PieCenterCloseButton>
 
     return (
         <div 
+            className={className}
             id={id}
+            key={id}
             hidden={hidden}
             data-dash-is-loading={
                 (loading_state && loading_state.is_loading) || undefined}>
+            {/* <ThemeProvider theme={theme}> */}
             <PieMenu 
-                radius={radius}
-                centerRadius={centerRadius}
+                radius={radius || "100px"}
+                centerRadius={centerRadius || "30px"}
                 centerX={centerX}
                 centerY={centerY}
-                // onChange={
-                    /*
-                     * Send the new value to the parent component.
-                     * setProps is a prop that is automatically supplied
-                     * by dash's front-end ("dash-renderer").
-                     * In a Dash app, this will update the component's
-                     * props and send the data back to the Python Dash
-                     * app server if a callback uses the modified prop as
-                     * Input or State.
-                     */
-                    // e => props.setProps({ value: e.target.value })
-                // }
-            >
+                // Center={centerButton}
+                >
                 {slices}
             </PieMenu>
+            {/* </ThemeProvider> */}
         </div>
     );
 }
 
-
 DashReactPieMenu.defaultProps = {
-    "radius":"125px",
+    "className":"react-pie-menu",
+    "radius":"100px",
     "centerRadius":"30px",
-    hidden:false
+    "hidden":false
 };
 
 DashReactPieMenu.propTypes = {
@@ -95,7 +82,11 @@ DashReactPieMenu.propTypes = {
      */
     // attrs: PropTypes.object,
     
-
+    /**
+     * Defines the center radius. For example, 30px or 0 (no center). This prop is forwarded to the Center Component.
+     */
+    className: PropTypes.string,
+    
     /**
      * Defines the center radius. For example, 30px or 0 (no center). This prop is forwarded to the Center Component.
      */
@@ -121,6 +112,7 @@ DashReactPieMenu.propTypes = {
      */
     hidden: PropTypes.bool,
 
+    iconsize: PropTypes.string,
     /**
      * The ID used to identify this component in Dash callbacks.
      */
@@ -153,5 +145,6 @@ DashReactPieMenu.propTypes = {
      * Dash-assigned callback that should be called to report property changes
      * to Dash, to make them available for callbacks.
      */
-    setProps: PropTypes.func
+    setProps: PropTypes.func,
+
 };
