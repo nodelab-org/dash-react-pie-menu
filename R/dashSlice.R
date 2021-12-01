@@ -1,8 +1,8 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
-dashSlice <- function(icon=NULL, iconsize=NULL, id=NULL, loading_state=NULL, n_clicks=NULL) {
+dashSlice <- function(attrs=NULL, className=NULL, icon=NULL, iconColor=NULL, iconSize=NULL, id=NULL, loading_state=NULL, n_clicks=NULL) {
     
-    props <- list(icon=icon, iconsize=iconsize, id=id, loading_state=loading_state, n_clicks=n_clicks)
+    props <- list(attrs=attrs, className=className, icon=icon, iconColor=iconColor, iconSize=iconSize, id=id, loading_state=loading_state, n_clicks=n_clicks)
     if (length(props) > 0) {
         props <- props[!vapply(props, is.null, logical(1))]
     }
@@ -10,7 +10,7 @@ dashSlice <- function(icon=NULL, iconsize=NULL, id=NULL, loading_state=NULL, n_c
         props = props,
         type = 'DashSlice',
         namespace = 'dash_react_pie_menu',
-        propNames = c('icon', 'iconsize', 'id', 'loading_state', 'n_clicks'),
+        propNames = c('attrs', 'className', 'icon', 'iconColor', 'iconSize', 'id', 'loading_state', 'n_clicks'),
         package = 'dashReactPieMenu'
         )
 
