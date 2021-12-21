@@ -6,12 +6,12 @@ authors = ["Your Name <you@example.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.5"
 dash = "^2.0.0"
-sd-material-ui = "^4.5.1"
-dash-bootstrap-components = "^1.0.0"
 
 [tool.poetry.dev-dependencies]
+sd-material-ui = "^4.5.1"
+dash-bootstrap-components = "^1.0.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
