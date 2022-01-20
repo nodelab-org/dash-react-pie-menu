@@ -57,28 +57,28 @@ app.layout = html.Div([
                             icon="faEyeSlash",
                             iconColor="orange",
                             iconSize="2x",
-                            # label = "hide"
+                            label = "hide"
                         ),
                         dash_react_pie_menu.DashSlice(
                             id={"type":"slice", "index":"2"},
                             icon="faPalette",
                             iconColor="red",
                             iconSize="2x",
-                            # label = "color"
+                            label = "color"
                         ),
                         dash_react_pie_menu.DashSlice(
                             id={"type":"slice", "index":"3"},
                             icon="faArrowsAlt",
                             iconColor="green",
                             iconSize="2x",
-                            # label = "expand"
+                            label = "expand"
                         ),
                         dash_react_pie_menu.DashSlice(
                             id={"type":"slice", "index":"4"},
                             icon="faTag",
                             iconColor="blue",
                             iconSize="2x",
-                            # label = "attribute"
+                            label = "attribute"
                         )
                     ]
                 ),

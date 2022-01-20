@@ -79,7 +79,8 @@ _js_dist.extend(
     ]
 )
 
-_css_dist = []
+_css_dist = [
+]
 
 
 for _component in __all__:

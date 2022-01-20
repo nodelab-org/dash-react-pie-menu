@@ -1,4 +1,4 @@
-import React, {} from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import {Slice} from 'react-pie-menu';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -210,20 +210,52 @@ const icons = {
 
 export default function DashSlice (props) {
 
-    const {attrs, className, icon, iconColor, iconSize, id, n_clicks, loading_state} = props;
+    const {attrs, icon, iconColor, iconSize, id, n_clicks, label, loading_state} = props;
+    let className = props.className
+    className += " tooltip"
+
     return (
         <Slice    
             id={id}
             key={id}
             attrs={attrs}
-            className={className}
+            className={className} 
             // data-dash-is-loading={
             //     (loading_state && loading_state.is_loading) || undefined
             // }
             onSelect={() => props.setProps({ "n_clicks" : n_clicks+1 })}
+            // onMouseOver={(_e) => label
+            //     ? setToolTip(_tt =>  {
+            //         return <div
+            //             style={
+            //                 {
+            //                     "color": "white",
+            //                     "background": "black",
+            //                     "borderRadius": "5px",
+            //                     "border": "1px solid",
+            //                     "padding": "10px",
+            //                     // "display":"block",
+            //                     "position": "absolute",
+            //                     "top":0,
+            //                     "left":0,
+            //                     // "zIndex": "1000"
+            //                     // padding: ${props.padding ? `${props.padding}px` : 0};
+            //                     // font-size: ${props.fontSize};
+            //                     // font-family: ${props.fontFamily};
+            //                 }
+            //             }
+            //         >
+            //             {label}
+            //         </div>
+            //     })
+            //     : null
+            // }
+            // onMouseOut={(_e) => setToolTip(_tt => null)}
             >
             <FontAwesomeIcon icon={icons[icon]} size={iconSize} color={iconColor}/>
+            <span className="tooltiptext tooltip-inner">{label}</span>
         </Slice>
+        
     );
 }
 
@@ -234,6 +266,7 @@ DashSlice.defaultProps = {
     // hidden: false,
     iconColor:"#192733",
     iconSize:"2x",
+    label: null,
     n_clicks:0
     // style:{}
 };
@@ -297,6 +330,12 @@ DashSlice.propTypes = {
          */
         component_name: PropTypes.string
     }),
+
+    /**
+     * number of times slice has been clicked
+     */
+    label: PropTypes.string,
+
 
     /**
      * number of times slice has been clicked

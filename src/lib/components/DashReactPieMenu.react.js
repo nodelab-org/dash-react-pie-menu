@@ -39,8 +39,9 @@ const parseChildrenToArray = (children) => {
 // }
 
 export default function DashReactPieMenu (props) {
-    const {className, id, children,  hidden, radius, centerRadius, centerX, centerY, loading_state, setProps,  ...otherProps} = props;
-
+    const {id, children,  className, hidden, radius, centerRadius, centerX, centerY, loading_state, setProps,  ...otherProps} = props;
+    // let className = props.className
+    // className += " tooltip"
     const slices = parseChildrenToArray(children)
     // const centerButton = () => {return <PieCenter centerRadius={centerRadius || '30px'}> </PieCenter>}
     // const centerButton = <PieCenterCloseButton centerRadius={centerRadius || "30px"} iconsize={iconsize} onclick={() => setProps({hidden:true})}> </PieCenterCloseButton>
@@ -59,6 +60,7 @@ export default function DashReactPieMenu (props) {
                 centerRadius={centerRadius || "30px"}
                 centerX={centerX}
                 centerY={centerY}
+                className={className}
                 // Center={centerButton}
                 >
                 {slices}

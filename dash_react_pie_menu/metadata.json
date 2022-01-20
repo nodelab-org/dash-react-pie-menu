@@ -4,6 +4,17 @@
     "displayName": "DashReactPieMenu",
     "methods": [],
     "props": {
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Defines the center radius. For example, 30px or 0 (no center). This prop is forwarded to the Center Component.",
+        "defaultValue": {
+          "value": "\"react-pie-menu\"",
+          "computed": false
+        }
+      },
       "centerRadius": {
         "type": {
           "name": "string"
@@ -47,6 +58,13 @@
           "computed": false
         }
       },
+      "iconsize": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": ""
+      },
       "id": {
         "type": {
           "name": "string"
@@ -85,7 +103,7 @@
         "required": false,
         "description": "Defines pie menu's radius in CSS Unit. For example, 150px. `",
         "defaultValue": {
-          "value": "\"125px\"",
+          "value": "\"100px\"",
           "computed": false
         }
       },
@@ -103,19 +121,52 @@
     "displayName": "DashSlice",
     "methods": [],
     "props": {
+      "attrs": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "You can add custom attributes by specifying in attrs. For example, { enabled: 'true' }.",
+        "defaultValue": {
+          "value": "{}",
+          "computed": false
+        }
+      },
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "CSS class",
+        "defaultValue": {
+          "value": "\"react-pie-menu-slice\"",
+          "computed": false
+        }
+      },
       "icon": {
         "type": {
           "name": "string"
         },
         "required": true,
-        "description": "The ID used to identify this component in Dash callbacks."
+        "description": "The font awesome icon, e.g. \"faCoffee\". Must be one of the icons imported above."
       },
-      "iconsize": {
+      "iconColor": {
         "type": {
           "name": "string"
         },
         "required": false,
-        "description": "The ID used to identify this component in Dash callbacks.",
+        "description": "Icon color",
+        "defaultValue": {
+          "value": "\"#192733\"",
+          "computed": false
+        }
+      },
+      "iconSize": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "icon size, e.g. \"xs\", \"2x\". See https://fontawesome.com/v5.15/how-to-use/on-the-web/styling/sizing-icons",
         "defaultValue": {
           "value": "\"2x\"",
           "computed": false
@@ -152,12 +203,23 @@
         "required": false,
         "description": "Assigned by Dash"
       },
+      "label": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "number of times slice has been clicked",
+        "defaultValue": {
+          "value": "null",
+          "computed": false
+        }
+      },
       "n_clicks": {
         "type": {
           "name": "number"
         },
         "required": false,
-        "description": "Height of the content in CSS Size. This prop is used to center the content between top and bottom of the slice. For example, 2em.",
+        "description": "number of times slice has been clicked",
         "defaultValue": {
           "value": "0",
           "computed": false

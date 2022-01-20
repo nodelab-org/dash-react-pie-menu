@@ -1,6 +1,7 @@
 include dash_react_pie_menu/dash_react_pie_menu.min.js
 include dash_react_pie_menu/dash_react_pie_menu.min.js.map
 include dash_react_pie_menu/async-*.js
+include dash_react_pie_menu/styles.css
 include dash_react_pie_menu/async-*.js.map
 include dash_react_pie_menu/*-shared.js
 include dash_react_pie_menu/*-shared.js.map
