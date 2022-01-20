@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {e} from 'react';
 import PropTypes from 'prop-types';
 import {Slice} from 'react-pie-menu';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -211,8 +211,7 @@ const icons = {
 export default function DashSlice (props) {
 
     const {attrs, icon, iconColor, iconSize, id, n_clicks, label, loading_state} = props;
-    let className = props.className
-    className += " tooltip"
+    const className = props.className + " tooltip"
 
     return (
         <Slice    
@@ -253,7 +252,7 @@ export default function DashSlice (props) {
             // onMouseOut={(_e) => setToolTip(_tt => null)}
             >
             <FontAwesomeIcon icon={icons[icon]} size={iconSize} color={iconColor}/>
-            <span className="tooltiptext tooltip-inner">{label}</span>
+            <span className="tooltiptext">{label}</span>
         </Slice>
         
     );
@@ -332,7 +331,7 @@ DashSlice.propTypes = {
     }),
 
     /**
-     * number of times slice has been clicked
+     * label for tooltip
      */
     label: PropTypes.string,
 
