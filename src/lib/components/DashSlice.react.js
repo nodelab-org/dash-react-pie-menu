@@ -221,6 +221,8 @@ export default function DashSlice (props) {
             //     (loading_state && loading_state.is_loading) || undefined
             // }
             onSelect={() => props.setProps({ "n_clicks" : n_clicks+1 })}
+            onMouseOver={() => props.setProps({ "hovered" : true })}
+            onMouseOut={() => props.setProps({ "hovered" : false })}
             >
             <FontAwesomeIcon icon={icons[icon]} size={iconSize} color={iconColor}/>
         </Slice>
@@ -234,7 +236,8 @@ DashSlice.defaultProps = {
     // hidden: false,
     iconColor:"#192733",
     iconSize:"2x",
-    n_clicks:0
+    n_clicks:0,
+    hovered:false
     // style:{}
 };
 
@@ -303,7 +306,11 @@ DashSlice.propTypes = {
      */
     n_clicks: PropTypes.number,
 
-    
+    /**
+     * whether slice is hovered
+     */
+    hovered: PropTypes.bool,
+
     /**
      * Dash-assigned callback that should be called to report property changes
      * to Dash, to make them available for callbacks.

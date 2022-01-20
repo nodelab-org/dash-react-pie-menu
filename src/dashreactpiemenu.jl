@@ -5,8 +5,8 @@ using Dash
 const resources_path = realpath(joinpath( @__DIR__, "..", "deps"))
 const version = "0.0.1"
 
-include("dashreactpiemenu.jl")
-include("dashslice.jl")
+include("jl/dashreactpiemenu.jl")
+include("jl/dashslice.jl")
 
 function __init__()
     DashBase.register_package(

@@ -10,13 +10,15 @@
 }
 
 \usage{
-dashReactPieMenu(children=NULL, centerRadius=NULL, centerX=NULL,
-centerY=NULL, hidden=NULL, id=NULL, loading_state=NULL,
-radius=NULL)
+dashReactPieMenu(children=NULL, id=NULL, centerRadius=NULL, centerX=NULL,
+centerY=NULL, className=NULL, hidden=NULL, iconsize=NULL,
+loading_state=NULL, radius=NULL)
 }
 
 \arguments{
 \item{children}{Unnamed list. DashSlice components}
+
+\item{id}{Character. The ID used to identify this component in Dash callbacks.}
 
 \item{centerRadius}{Character. Defines the center radius. For example, 30px or 0 (no center). This prop is forwarded to the Center Component.}
 
@@ -24,9 +26,11 @@ radius=NULL)
 
 \item{centerY}{Character. Defines the y position of the pie menu in CSS Unit. For example, 0px will be the top-most position of its parent container.}
 
+\item{className}{Character. Defines the center radius. For example, 30px or 0 (no center). This prop is forwarded to the Center Component.}
+
 \item{hidden}{Logical. The ID used to identify this component in Dash callbacks.}
 
-\item{id}{Character. The ID used to identify this component in Dash callbacks.}
+\item{iconsize}{Character. }
 
 \item{loading_state}{Lists containing elements 'is_loading', 'prop_name', 'component_name'.
 those elements have the following types:

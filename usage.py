@@ -83,6 +83,7 @@ app.layout = html.Div([
                     ]
                 ),
                 html.Div(id='output1'),
+                html.Div(id='output2'),
             ]
         )
     )
@@ -134,6 +135,22 @@ def display_output_1(n_clicks):
     print("display_output_1")
     return 'You have clicked {}'.format(trigger_id)
 
+
+
+@app.callback(Output('output2', 'children'), 
+    [
+        Input({"type":"slice", "index":ALL}, "hovered")
+    ])
+def display_output_2(hovered):
+    ctx = dash.callback_context
+    if not ctx.triggered:
+        raise PreventUpdate
+    else:
+        trigger_id = ctx.triggered[0]["prop_id"].split(".")[0]
+    print("")
+    print("display_output_1")
+    index = json.loads(trigger_id)["index"]
+    return f'slice {index} hovered: {hovered}'
 
 # @app.callback(
 #     [
