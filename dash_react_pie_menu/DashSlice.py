@@ -31,7 +31,7 @@ Keyword arguments:
     https://fontawesome.com/v5.15/how-to-use/on-the-web/styling/sizing-icons.
 
 - label (string; optional):
-    number of times slice has been clicked.
+    label for tooltip.
 
 - loading_state (dict; optional):
     Assigned by Dash.

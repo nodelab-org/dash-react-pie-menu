@@ -208,7 +208,7 @@
           "name": "string"
         },
         "required": false,
-        "description": "number of times slice has been clicked",
+        "description": "label for tooltip",
         "defaultValue": {
           "value": "null",
           "computed": false
