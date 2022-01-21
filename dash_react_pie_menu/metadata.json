@@ -203,6 +203,17 @@
         "required": false,
         "description": "Assigned by Dash"
       },
+      "label": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "label to show on hover",
+        "defaultValue": {
+          "value": "null",
+          "computed": false
+        }
+      },
       "n_clicks": {
         "type": {
           "name": "number"
@@ -211,17 +222,6 @@
         "description": "number of times slice has been clicked",
         "defaultValue": {
           "value": "0",
-          "computed": false
-        }
-      },
-      "hovered": {
-        "type": {
-          "name": "bool"
-        },
-        "required": false,
-        "description": "whether slice is hovered",
-        "defaultValue": {
-          "value": "false",
           "computed": false
         }
       },

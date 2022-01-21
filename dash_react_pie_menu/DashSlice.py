@@ -19,9 +19,6 @@ Keyword arguments:
 - className (string; default "react-pie-menu-slice"):
     CSS class.
 
-- hovered (boolean; default False):
-    whether slice is hovered.
-
 - icon (string; required):
     The font awesome icon, e.g. \"faCoffee\". Must be one of the icons
     imported above.
@@ -32,6 +29,9 @@ Keyword arguments:
 - iconSize (string; default "2x"):
     icon size, e.g. \"xs\", \"2x\". See
     https://fontawesome.com/v5.15/how-to-use/on-the-web/styling/sizing-icons.
+
+- label (string; optional):
+    label to show on hover.
 
 - loading_state (dict; optional):
     Assigned by Dash.
@@ -50,12 +50,12 @@ Keyword arguments:
 - n_clicks (number; default 0):
     number of times slice has been clicked."""
     @_explicitize_args
-    def __init__(self, attrs=Component.UNDEFINED, className=Component.UNDEFINED, icon=Component.REQUIRED, iconColor=Component.UNDEFINED, iconSize=Component.UNDEFINED, id=Component.REQUIRED, loading_state=Component.UNDEFINED, n_clicks=Component.UNDEFINED, hovered=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['id', 'attrs', 'className', 'hovered', 'icon', 'iconColor', 'iconSize', 'loading_state', 'n_clicks']
+    def __init__(self, attrs=Component.UNDEFINED, className=Component.UNDEFINED, icon=Component.REQUIRED, iconColor=Component.UNDEFINED, iconSize=Component.UNDEFINED, id=Component.REQUIRED, loading_state=Component.UNDEFINED, label=Component.UNDEFINED, n_clicks=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['id', 'attrs', 'className', 'icon', 'iconColor', 'iconSize', 'label', 'loading_state', 'n_clicks']
         self._type = 'DashSlice'
         self._namespace = 'dash_react_pie_menu'
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['id', 'attrs', 'className', 'hovered', 'icon', 'iconColor', 'iconSize', 'loading_state', 'n_clicks']
+        self.available_properties = ['id', 'attrs', 'className', 'icon', 'iconColor', 'iconSize', 'label', 'loading_state', 'n_clicks']
         self.available_wildcard_properties =            []
         _explicit_args = kwargs.pop('_explicit_args')
         _locals = locals()

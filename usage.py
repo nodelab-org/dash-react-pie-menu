@@ -57,28 +57,28 @@ app.layout = html.Div([
                             icon="faEyeSlash",
                             iconColor="orange",
                             iconSize="2x",
-                            # label = "hide"
+                            label = "hide"
                         ),
                         dash_react_pie_menu.DashSlice(
                             id={"type":"slice", "index":"2"},
                             icon="faPalette",
                             iconColor="red",
                             iconSize="2x",
-                            # label = "color"
+                            label = "color"
                         ),
                         dash_react_pie_menu.DashSlice(
                             id={"type":"slice", "index":"3"},
                             icon="faArrowsAlt",
                             iconColor="green",
                             iconSize="2x",
-                            # label = "expand"
+                            label = "expand"
                         ),
                         dash_react_pie_menu.DashSlice(
                             id={"type":"slice", "index":"4"},
                             icon="faTag",
                             iconColor="blue",
                             iconSize="2x",
-                            # label = "attribute"
+                            label = "attribute"
                         )
                     ]
                 ),
@@ -137,20 +137,7 @@ def display_output_1(n_clicks):
 
 
 
-@app.callback(Output('output2', 'children'), 
-    [
-        Input({"type":"slice", "index":ALL}, "hovered")
-    ])
-def display_output_2(hovered):
-    ctx = dash.callback_context
-    if not ctx.triggered:
-        raise PreventUpdate
-    else:
-        trigger_id = ctx.triggered[0]["prop_id"].split(".")[0]
-    print("")
-    print("display_output_1")
-    index = json.loads(trigger_id)["index"]
-    return f'slice {index} hovered: {hovered}'
+
 
 # @app.callback(
 #     [
