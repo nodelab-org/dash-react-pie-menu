@@ -10,8 +10,8 @@
 }
 
 \usage{
-dashSlice(id=NULL, attrs=NULL, className=NULL, hovered=NULL,
-icon=NULL, iconColor=NULL, iconSize=NULL,
+dashSlice(id=NULL, attrs=NULL, className=NULL, icon=NULL,
+iconColor=NULL, iconSize=NULL, label=NULL,
 loading_state=NULL, n_clicks=NULL)
 }
 
@@ -22,13 +22,13 @@ loading_state=NULL, n_clicks=NULL)
 
 \item{className}{Character. CSS class}
 
-\item{hovered}{Logical. whether slice is hovered}
-
 \item{icon}{Character. The font awesome icon, e.g. "faCoffee". Must be one of the icons imported above.}
 
 \item{iconColor}{Character. Icon color}
 
 \item{iconSize}{Character. icon size, e.g. "xs", "2x". See https://fontawesome.com/v5.15/how-to-use/on-the-web/styling/sizing-icons}
+
+\item{label}{Character. label to show on hover}
 
 \item{loading_state}{Lists containing elements 'is_loading', 'prop_name', 'component_name'.
 those elements have the following types:

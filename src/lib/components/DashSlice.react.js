@@ -210,7 +210,7 @@ const icons = {
 
 export default function DashSlice (props) {
 
-    const {attrs, className, icon, iconColor, iconSize, id, n_clicks, loading_state} = props;
+    const {attrs, className, icon, iconColor, iconSize, id, label, n_clicks, loading_state} = props;
     return (
         <Slice    
             id={id}
@@ -221,10 +221,14 @@ export default function DashSlice (props) {
             //     (loading_state && loading_state.is_loading) || undefined
             // }
             onSelect={() => props.setProps({ "n_clicks" : n_clicks+1 })}
-            onMouseOver={() => props.setProps({ "hovered" : true })}
-            onMouseOut={() => props.setProps({ "hovered" : false })}
+            // onMouseOver={() => props.setProps({ "hovered" : true })}
+            // onMouseOut={() => props.setProps({ "hovered" : false })}
             >
+            {/* <abbr title="testing 1-2">{"\u2753"}</abbr>. */}
+            <abbr title={label}>
             <FontAwesomeIcon icon={icons[icon]} size={iconSize} color={iconColor}/>
+            </abbr>
+            
         </Slice>
     );
 }
@@ -237,7 +241,8 @@ DashSlice.defaultProps = {
     iconColor:"#192733",
     iconSize:"2x",
     n_clicks:0,
-    hovered:false
+    // hovered:false,
+    label: null
     // style:{}
 };
 
@@ -302,14 +307,14 @@ DashSlice.propTypes = {
     }),
 
     /**
+     * label to show on hover
+     */
+    label: PropTypes.string,
+
+    /**
      * number of times slice has been clicked
      */
     n_clicks: PropTypes.number,
-
-    /**
-     * whether slice is hovered
-     */
-    hovered: PropTypes.bool,
 
     /**
      * Dash-assigned callback that should be called to report property changes
