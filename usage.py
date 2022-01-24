@@ -54,7 +54,7 @@ app.layout = html.Div([
                     children=[
                         dash_react_pie_menu.DashSlice(
                             id={"type":"slice", "index":"1"},
-                            icon="faEyeSlash",
+                            icon="faIdBadge",
                             iconColor="orange",
                             iconSize="2x",
                             label = "hide"

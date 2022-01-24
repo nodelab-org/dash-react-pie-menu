@@ -7,10 +7,10 @@ import {
     // fix node (data)
     faAnchor,
     // two-way arrow. Add link or relation
-    faArrowAltH,
+    faArrowsAltH,
     // arrow. Add link
-    faArrowAltRight,
-    faArrowAltLeft,
+    faLongArrowAltRight,
+    faLongArrowAltLeft,
     // expand neighbours
     faArrowsAlt,
     // graph? 
@@ -21,8 +21,6 @@ import {
     faBriefcase,
     // node
     faCircle,
-    // graph, data
-    faCloudsmith,
     // subtyping
     faCodeBranch,
     // settings
@@ -128,7 +126,7 @@ import {
     // label or attribute
     faUserTag,
     // Role
-    faUserId,
+    faIdBadge,
     // Role? Guy in suit
     faUserTie,
     // settings
@@ -137,16 +135,15 @@ import {
 
 const icons = {
     "faAnchor":faAnchor,
-    "faArrowAltH":faArrowAltH,
+    "faArrowAltH":faArrowsAltH,
     // arrow. Add link
-    "faArrowAltRight":faArrowAltRight,
-    "faArrowAltLeft":faArrowAltLeft,
+    "faLongArrowAltRight":faLongArrowAltRight, // import fails
+    "faArrowAltLeft":faLongArrowAltLeft, // import fails 
     "faArrowsAlt":faArrowsAlt, 
     "faBezierCurve":faBezierCurve,
     "faBookmark":faBookmark, 
     "faBriefcase":faBriefcase,
     "faCircle":faCircle,
-    "faCloudsmith":faCloudsmith,
     "faCog":faCog,
     "faCodeBranch":faCodeBranch,
     "faCompressArrowsAlt":faCompressArrowsAlt,
@@ -205,7 +202,7 @@ const icons = {
     "faTrash":faTrash,
     "faTrashAlt":faTrashAlt,
     "faUnlink":faUnlink,
-    "faUserId":faUserId,
+    "faIdBadge":faIdBadge,
     "faUserTag":faUserTag,
     "faUserTie":faUserTie,
     "faWrench":faWrench
