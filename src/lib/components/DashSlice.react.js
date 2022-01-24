@@ -128,6 +128,8 @@ import {
     // label or attribute
     faUserTag,
     // Role
+    faUserId,
+    // Role? Guy in suit
     faUserTie,
     // settings
     faWrench
@@ -203,6 +205,7 @@ const icons = {
     "faTrash":faTrash,
     "faTrashAlt":faTrashAlt,
     "faUnlink":faUnlink,
+    "faUserId":faUserId,
     "faUserTag":faUserTag,
     "faUserTie":faUserTie,
     "faWrench":faWrench
