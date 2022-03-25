@@ -13,8 +13,6 @@ import {
     faLongArrowAltLeft,
     // expand neighbours
     faArrowsAlt,
-    // size
-    faArrowUpBigSmall,
     // graph? 
     faBezierCurve,
     // bookmark
@@ -31,6 +29,8 @@ import {
     faCompressArrowsAlt,
     // similar to material UI storage
     faDatabase,
+    // possible sizew
+    faDotCircle,
     // download
     faDownload,
     // edit
@@ -113,6 +113,8 @@ import {
     faSortNumericDownAlt,
     faSortNumericUp,
     faSortNumericUpAlt,
+    // size
+    faSortSizeUp,
     // attribute(s)
     faTag, 
     faTags,
@@ -142,8 +144,6 @@ const icons = {
     "faLongArrowAltRight":faLongArrowAltRight, // import fails
     "faArrowAltLeft":faLongArrowAltLeft, // import fails 
     "faArrowsAlt":faArrowsAlt, 
-    // size
-    "faArrowUpBigSmall": faArrowUpBigSmall,
     "faBezierCurve":faBezierCurve,
     "faBookmark":faBookmark, 
     "faBriefcase":faBriefcase,
@@ -153,6 +153,7 @@ const icons = {
     "faCompressArrowsAlt":faCompressArrowsAlt,
     "faDatabase":faDatabase,
     "faDownload":faDownload,
+    "faDotCircle":faDotCircle,
     "faEdit":faEdit,
     "faEyeSlash":faEyeSlash, 
     "faExpandAlt":faExpandAlt,
@@ -199,6 +200,7 @@ const icons = {
     "faSortNumericDownAlt":faSortNumericDownAlt,
     "faSortNumericUp":faSortNumericUp,
     "faSortNumericUpAlt":faSortNumericUpAlt,
+    "faSortSizeUp":faSortSizeUp,
     "faTag":faTag, 
     "faTags":faTags, 
     "faTerminal":faTerminal,
