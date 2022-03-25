@@ -10,7 +10,7 @@
 }
 
 \usage{
-dashSlice(id=NULL, attrs=NULL, className=NULL, icon=NULL,
+dashSlice(id=NULL, attrs=NULL, className=NULL, hidden=NULL, icon=NULL,
 iconColor=NULL, iconSize=NULL, label=NULL,
 loading_state=NULL, n_clicks=NULL)
 }
@@ -21,6 +21,8 @@ loading_state=NULL, n_clicks=NULL)
 \item{attrs}{Named list. You can add custom attributes by specifying in attrs. For example, { enabled: 'true' }.}
 
 \item{className}{Character. CSS class}
+
+\item{hidden}{Logical. whether to highlight}
 
 \item{icon}{Character. The font awesome icon, e.g. "faCoffee". Must be one of the icons imported above.}
 

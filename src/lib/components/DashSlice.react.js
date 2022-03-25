@@ -13,6 +13,8 @@ import {
     faLongArrowAltLeft,
     // expand neighbours
     faArrowsAlt,
+    // size
+    faArrowUpBigSmall,
     // graph? 
     faBezierCurve,
     // bookmark
@@ -140,6 +142,8 @@ const icons = {
     "faLongArrowAltRight":faLongArrowAltRight, // import fails
     "faArrowAltLeft":faLongArrowAltLeft, // import fails 
     "faArrowsAlt":faArrowsAlt, 
+    // size
+    "faArrowUpBigSmall": faArrowUpBigSmall,
     "faBezierCurve":faBezierCurve,
     "faBookmark":faBookmark, 
     "faBriefcase":faBriefcase,
@@ -210,13 +214,14 @@ const icons = {
 
 export default function DashSlice (props) {
 
-    const {attrs, className, icon, iconColor, iconSize, id, label, n_clicks, loading_state} = props;
+    const {attrs, className, hidden, icon, iconColor, iconSize, id, label, n_clicks, loading_state} = props;
     return (
         <Slice    
             id={id}
             key={id}
             attrs={attrs}
             className={className}
+            hidden={hidden}
             // data-dash-is-loading={
             //     (loading_state && loading_state.is_loading) || undefined
             // }
@@ -242,7 +247,8 @@ DashSlice.defaultProps = {
     iconSize:"2x",
     n_clicks:0,
     // hovered:false,
-    label: null
+    label: null,
+    hidden: false
     // style:{}
 };
 
@@ -268,6 +274,7 @@ DashSlice.propTypes = {
      * whether to highlight 
      */
     // highlight: PropTypes.bool,
+    hidden: PropTypes.bool,
     
     /**
      * The font awesome icon, e.g. "faCoffee". Must be one of the icons imported above.

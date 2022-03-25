@@ -78,7 +78,8 @@ app.layout = html.Div([
                             icon="faTag",
                             iconColor="blue",
                             iconSize="2x",
-                            label = "attribute"
+                            label = "attribute",
+                            hidden=True
                         )
                     ]
                 ),

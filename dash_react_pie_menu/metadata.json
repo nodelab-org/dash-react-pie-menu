@@ -143,6 +143,17 @@
           "computed": false
         }
       },
+      "hidden": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "whether to highlight",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
       "icon": {
         "type": {
           "name": "string"
