@@ -13,7 +13,6 @@ import {
     faLongArrowAltLeft,
     // expand neighbours
     faArrowsAlt,
-    // graph? 
     faBezierCurve,
     // bookmark
     faBookmark, 
@@ -56,8 +55,6 @@ import {
     faHardHat,
     // highlight
     faHighlighter,
-    // relation/relates (a hub node connecting others)
-    faHubSpot,
     // icons
     faIcons,
     // images
@@ -113,8 +110,6 @@ import {
     faSortNumericDownAlt,
     faSortNumericUp,
     faSortNumericUpAlt,
-    // size
-    faSortSizeUp,
     // attribute(s)
     faTag, 
     faTags,
@@ -166,7 +161,6 @@ const icons = {
     "faHandshakeSlash":faHandshakeSlash,
     "faHardHat": faHardHat,
     "faHighlighter":faHighlighter,
-    "faHubSpot":faHubSpot, 
     "faIcons":faIcons,
     "faImages":faImages,
     "faKey":faKey,
@@ -200,7 +194,6 @@ const icons = {
     "faSortNumericDownAlt":faSortNumericDownAlt,
     "faSortNumericUp":faSortNumericUp,
     "faSortNumericUpAlt":faSortNumericUpAlt,
-    "faSortSizeUp":faSortSizeUp,
     "faTag":faTag, 
     "faTags":faTags, 
     "faTerminal":faTerminal,
