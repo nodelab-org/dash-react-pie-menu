@@ -8,13 +8,11 @@ license = "MIT"
 [tool.poetry.dependencies]
 python = ">=3.6,<4.0"
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.dev.dependencies]
+pyyaml = "^6.0.1"
 sd-material-ui = "^4.5.1"
 dash-bootstrap-components = "^1.0.0"
 dash = "^2.0.0"
-
-[tool.poetry.group.dev.dependencies]
-pyyaml = "^6.0.1"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
